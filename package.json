@@ -1,0 +1,20 @@
+{
+  "name": "InternetHeroku",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^9.11.0",
+    "@wdio/cli": "^9.12.0",
+    "@wdio/local-runner": "^9.12.0",
+    "@wdio/mocha-framework": "^9.11.0",
+    "@wdio/spec-reporter": "^9.11.0"
+  },
+  "scripts": {
+    "regression": "wdio run ./regression.conf.js",
+    "add": "wdio run ./add.conf.js",
+    "dropdown": "wdio run ./dropdown.conf.js",
+    "smoke": "wdio run ./smoke.conf.js"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.33.0"
+  }
+}
