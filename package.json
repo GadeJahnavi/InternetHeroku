@@ -10,10 +10,6 @@
     "mocha": "^11.1.0"
   },
   "scripts": {
-    "regression": "wdio run ./regression.conf.js",
-    "add": "wdio run ./add.conf.js",
-    "dropdown": "wdio run ./dropdown.conf.js",
-    "smoke": "wdio run ./smoke.conf.js",
     "wdio": "wdio run ./wdio.conf.js"
   },
   "dependencies": {
