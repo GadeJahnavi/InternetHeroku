@@ -22,7 +22,6 @@ export const config = {
     //
     specs: [
         './test/specs/**/*.spec.js',
-        // './test/specs/**/wdioRecordingTest.spec.js'
     ],
 
     // Patterns to exclude.
