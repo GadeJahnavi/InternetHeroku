@@ -21,8 +21,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        // './test/specs/**/*.spec.js',
-        './test/specs/**/wdioRecordingTest.spec.js'
+        './test/specs/**/dragDrop.spec.js'
     ],
 
     // Patterns to exclude.
@@ -51,9 +50,33 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
+    user: process.env.LT_USERNAME,
+    key: process.env.LT_ACCESS_KEY,
+    services: [
+        ['lambdatest', {
+            tunnel: true
+        }]
+    ],
     capabilities: [{
-        browserName: 'chrome'
+        "browserName": "Chrome",
+        "browserVersion": "134",
+        "LT:Options": {
+            "visual": true,
+            "video": true,
+            "platformName": "Windows 11",
+            "headless": true,
+            "network": true,
+            "build": "Test2",
+            "project": "Heroku",
+            "name": "Test2",
+            "tunnel": true,
+            "w3c": true,
+            "plugin": "node_js-webdriverio"
+        }
     }],
+    // capabilities: [{
+    //     browserName: 'chrome'
+    // }],
 
     //
     // ===================
