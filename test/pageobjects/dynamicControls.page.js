@@ -34,11 +34,11 @@ class DynamicControlsPage extends Page {
 
     
 
-    async enableCheckbox() {
+    async enableInput() {
         await this.enableButton.click();
     }
 
-    async disableCheckbox() {
+    async disableInput() {
         await this.disableButton.click();
     }
 

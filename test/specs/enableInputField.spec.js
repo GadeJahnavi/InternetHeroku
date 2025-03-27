@@ -7,14 +7,14 @@ describe('Dynamic Controls', () => {
         
         await DynamicControlsPage.open();
 
-        await DynamicControlsPage.enableCheckbox();
+        await DynamicControlsPage.enableInput();
 
         const messageText = await DynamicControlsPage.getMessageText();
         expect(messageText).toContain("It's enabled!");
 
         await DynamicControlsPage.disableButton
 
-        await DynamicControlsPage.disableCheckbox();
+        await DynamicControlsPage.disableInput();
         
         const displayMessage = await DynamicControlsPage.getMessageText();
         expect(displayMessage).toContain("It's disabled!");

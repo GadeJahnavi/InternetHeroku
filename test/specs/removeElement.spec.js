@@ -9,7 +9,7 @@ describe('Remove Element', () => {
         
         await AddRemoveElementsPage.pauseExecution(3000)
 
-        await expect(AddRemoveElementsPage.deleteBtn).not.toBeExisting()
+        await expect(AddRemoveElementsPage.deleteBtn).toBeExisting()
     })
 })
 

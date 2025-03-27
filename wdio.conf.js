@@ -124,11 +124,17 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec', ['allure', {
+    reporters: ['spec', 
+        ['video', {
+        saveAllVideos: false,       // If true, also saves videos for successful test cases
+        videoSlowdownMultiplier: 10, // Higher to get slower videos, lower for faster videos [Value 1-100]
+      }],
+      ['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
-    }]],
+    }]
+ ],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
